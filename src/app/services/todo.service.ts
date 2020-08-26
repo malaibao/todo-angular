@@ -26,4 +26,9 @@ export class TodoService {
     const url = `${this.todosURL}/${todo.id}`;
     return this.http.put(url, todo, httpOptions);
   }
+
+  deleteTodo(todo: Todo): Observable<any> {
+    const url = `${this.todosURL}/${todo.id}`;
+    return this.http.delete(url, httpOptions);
+  }
 }
